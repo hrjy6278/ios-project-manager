@@ -23,7 +23,7 @@ final class ProjectRowViewModel: Identifiable {
         self.project = project
     }
 
-    var id: UUID {
+    var id: String {
         return project.id
     }
 
@@ -39,8 +39,8 @@ final class ProjectRowViewModel: Identifiable {
         return project.date
     }
 
-    var description: String {
-        return project.description
+    var detail: String {
+        return project.detail
     }
 
     var type: ProjectStatus {

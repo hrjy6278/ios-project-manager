@@ -32,7 +32,7 @@ final class ProjectListViewModel: ObservableObject{
         }
     }
 
-    func selectedProject(from id: UUID?) -> ProjectRowViewModel? {
+    func selectedProject(from id: String?) -> ProjectRowViewModel? {
         if let id = id, let index = projectList.firstIndex(where: { $0.id == id }) {
             return projectList[index]
         }

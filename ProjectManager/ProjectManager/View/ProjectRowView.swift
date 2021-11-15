@@ -17,7 +17,7 @@ struct ProjectRowView: View {
             VStack(alignment: .leading) {
                 Text(viewModel.title)
                     .font(.title3)
-                Text(viewModel.description)
+                Text(viewModel.detail)
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .lineLimit(3)

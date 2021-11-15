@@ -20,7 +20,7 @@ struct ModalView: View {
     @State private var description: String = ""
     @State private var isEdit: Bool = false
     let modalViewType: ModalType
-    let projectID: UUID?
+    let projectID: String?
     
     var body: some View {
         NavigationView {
@@ -64,7 +64,7 @@ struct ModalView: View {
                     }
             self.title = viewModel.title
             self.date = viewModel.date
-            self.description = viewModel.description
+            self.description = viewModel.detail
         }
     }
 }
@@ -91,10 +91,7 @@ extension ModalView {
         Button {
             if modalViewType == .add {
                 projectListViewModel.action(
-                    .create(project: Project(title: title,
-                                             description: description,
-                                             date: date,
-                                             type: .todo)))
+                    .create(project: Project(title: title, detail: description, date: date, type: .todo)))
             } else if isEdit && modalViewType == .edit {
                 guard let id = projectID,
                         let viewModel = projectListViewModel.selectedProject(from: id) else {
@@ -103,7 +100,7 @@ extension ModalView {
                 projectListViewModel.action(
                     .update(project: Project(id: id,
                                              title: title,
-                                             description: description,
+                                             detail: description,
                                              date: date,
                                              type: viewModel.type)))
             }

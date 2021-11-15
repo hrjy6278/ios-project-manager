@@ -11,6 +11,14 @@
 		4D07ED19273176CF002D4DBC /* Extension + DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D07ED17273176CF002D4DBC /* Extension + DateFormatter.swift */; };
 		4D75985F27422A3B0090E6DA /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75985E27422A3B0090E6DA /* ProjectRepository.swift */; };
 		4D75986027422AB50090E6DA /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75985E27422A3B0090E6DA /* ProjectRepository.swift */; };
+		4D75986D27428DA30090E6DA /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D75986B27428DA30090E6DA /* CoreDataStorage.xcdatamodeld */; };
+		4D75986E27428DAA0090E6DA /* CoreDataStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D75986B27428DA30090E6DA /* CoreDataStorage.xcdatamodeld */; };
+		4D75987127428E290090E6DA /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */; };
+		4D75987227428E290090E6DA /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */; };
+		4D75987327428E290090E6DA /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */; };
+		4D75987427428E290090E6DA /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */; };
+		4D759877274295110090E6DA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D759876274295110090E6DA /* CoreDataStack.swift */; };
+		4D759878274295110090E6DA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D759876274295110090E6DA /* CoreDataStack.swift */; };
 		4DBCB3D327301F98008474D6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* Project.swift */; };
 		4DBCB3D427301F98008474D6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* Project.swift */; };
 		74311C24273017F400951DC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74311C23273017F400951DC3 /* ContentView.swift */; };
@@ -37,6 +45,10 @@
 /* Begin PBXFileReference section */
 		4D07ED17273176CF002D4DBC /* Extension + DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DateFormatter.swift"; sourceTree = "<group>"; };
 		4D75985E27422A3B0090E6DA /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		4D75986C27428DA30090E6DA /* CoreDataStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataStorage.xcdatamodel; sourceTree = "<group>"; };
+		4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4D759876274295110090E6DA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4DBCB3D027301935008474D6 /* NonFirebase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NonFirebase-Info.plist"; sourceTree = "<group>"; };
 		4DBCB3D227301F98008474D6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		74311C23273017F400951DC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,10 +100,22 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		4D759875274294E40090E6DA /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				4D759876274295110090E6DA /* CoreDataStack.swift */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
 		4DBCB3D127301F06008474D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D759875274294E40090E6DA /* CoreDataStack */,
+				4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */,
+				4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */,
 				4DBCB3D227301F98008474D6 /* Project.swift */,
+				4D75986B27428DA30090E6DA /* CoreDataStorage.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,14 +276,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D759878274295110090E6DA /* CoreDataStack.swift in Sources */,
 				74311C3B273104E400951DC3 /* ProjectListViewModel.swift in Sources */,
 				4D07ED19273176CF002D4DBC /* Extension + DateFormatter.swift in Sources */,
 				89FDAD2727302B840017A197 /* ModalView.swift in Sources */,
 				89F7D397273A3FEA004E7E9D /* ProjectRowViewModel.swift in Sources */,
+				4D75986E27428DAA0090E6DA /* CoreDataStorage.xcdatamodeld in Sources */,
 				4D75986027422AB50090E6DA /* ProjectRepository.swift in Sources */,
 				89FDAD242730256E0017A197 /* ProjectRowView.swift in Sources */,
+				4D75987227428E290090E6DA /* Project+CoreDataClass.swift in Sources */,
 				74311C292730181A00951DC3 /* AppDelegate.swift in Sources */,
 				74311C2A2730181A00951DC3 /* SceneDelegate.swift in Sources */,
+				4D75987427428E290090E6DA /* Project+CoreDataProperties.swift in Sources */,
 				89FDAD21273022F90017A197 /* ProjectListView.swift in Sources */,
 				74311C2B2730181A00951DC3 /* ContentView.swift in Sources */,
 				4DBCB3D427301F98008474D6 /* Project.swift in Sources */,
@@ -270,14 +298,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D759877274295110090E6DA /* CoreDataStack.swift in Sources */,
 				74311C3A273104E400951DC3 /* ProjectListViewModel.swift in Sources */,
 				4D07ED18273176CF002D4DBC /* Extension + DateFormatter.swift in Sources */,
 				89FDAD2627302B840017A197 /* ModalView.swift in Sources */,
 				89F7D396273A3EBE004E7E9D /* ProjectRowViewModel.swift in Sources */,
+				4D75986D27428DA30090E6DA /* CoreDataStorage.xcdatamodeld in Sources */,
 				4D75985F27422A3B0090E6DA /* ProjectRepository.swift in Sources */,
 				89FDAD232730256E0017A197 /* ProjectRowView.swift in Sources */,
+				4D75987127428E290090E6DA /* Project+CoreDataClass.swift in Sources */,
 				C7431F0625F51E1D0094C4CF /* AppDelegate.swift in Sources */,
 				C7431F0825F51E1D0094C4CF /* SceneDelegate.swift in Sources */,
+				4D75987327428E290090E6DA /* Project+CoreDataProperties.swift in Sources */,
 				89FDAD20273022F90017A197 /* ProjectListView.swift in Sources */,
 				74311C24273017F400951DC3 /* ContentView.swift in Sources */,
 				4DBCB3D327301F98008474D6 /* Project.swift in Sources */,
@@ -531,6 +563,19 @@
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4D75986B27428DA30090E6DA /* CoreDataStorage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D75986C27428DA30090E6DA /* CoreDataStorage.xcdatamodel */,
+			);
+			currentVersion = 4D75986C27428DA30090E6DA /* CoreDataStorage.xcdatamodel */;
+			path = CoreDataStorage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C7431EFA25F51E1D0094C4CF /* Project object */;
 }
