@@ -15,20 +15,20 @@ enum Action  {
 
 final class ProjectListViewModel: ObservableObject{
     @Published private(set) var projectList: [ProjectRowViewModel] = []
+    private let projectRepository = ProjectRepository()
+    
+    init() {
+        self.projectRepository.delegate = self
+    }
 
     func action(_ action: Action) {
-        let projectRowViewModel: ProjectRowViewModel
         switch action {
         case .create(let project):
-            projectRowViewModel = ProjectRowViewModel(project: project)
-            projectRowViewModel.delegate = self
-            projectList.append(projectRowViewModel)
+            projectRepository.addProject(project)
         case .delete(let indexSet):
-            projectList.remove(atOffsets: indexSet)
+            projectRepository.removeProject(indexSet: indexSet)
         case .update(let project):
-            projectRowViewModel = ProjectRowViewModel(project: project)
-            projectRowViewModel.delegate = self
-            projectList.firstIndex { $0.id == projectRowViewModel.id }.flatMap { projectList[$0] = projectRowViewModel }
+            projectRepository.updateProject(project)
         }
     }
 
@@ -49,5 +49,15 @@ final class ProjectListViewModel: ObservableObject{
 extension ProjectListViewModel: ProjectRowViewModelDelegate {
     func updateViewModel() {
         objectWillChange.send()
+    }
+}
+
+extension ProjectListViewModel: ProjectRepositoryDelegate {
+    func changeRepository(project: [Project]) {
+        projectList = project.map { project in
+           let rowViewModel = ProjectRowViewModel(project: project)
+            rowViewModel.delegate = self
+            return rowViewModel
+        }
     }
 }
