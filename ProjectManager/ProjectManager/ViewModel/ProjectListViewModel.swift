@@ -17,8 +17,8 @@ final class ProjectListViewModel: ObservableObject{
     @Published private(set) var projectList: [ProjectRowViewModel] = []
     private let projectRepository = ProjectRepository()
     
-    init() {
-        self.projectRepository.delegate = self
+    func onAppear() {
+        projectRepository.setUp(delegate: self)
     }
 
     func action(_ action: Action) {

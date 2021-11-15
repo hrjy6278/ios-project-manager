@@ -41,4 +41,8 @@ final class CoreDataStack {
             }
         }
     }
+    
+    func fetch() -> [Project] {
+       return try! context.fetch(Project.fetchRequest())
+    }
 }

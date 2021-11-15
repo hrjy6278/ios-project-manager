@@ -19,11 +19,18 @@ final class ProjectRepository {
         }
     }
     
+    func setUp(delegate: ProjectRepositoryDelegate) {
+        self.delegate = delegate
+        projects = CoreDataStack.shared.fetch()
+    }
+    
     func addProject(_ project: Project) {
         projects.append(project)
     }
     
     func removeProject(indexSet: IndexSet) {
+        let index = indexSet[indexSet.startIndex]
+        CoreDataStack.shared.context.delete(projects[index])
         projects.remove(atOffsets: indexSet)
     }
     

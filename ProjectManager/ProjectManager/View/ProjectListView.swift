@@ -35,6 +35,9 @@ struct ProjectListView: View {
              }
             .listStyle(.plain)
         }
+        .onAppear {
+            projectListViewModel.onAppear()
+        }
     }
 }
 
