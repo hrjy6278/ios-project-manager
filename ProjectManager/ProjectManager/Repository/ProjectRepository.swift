@@ -23,6 +23,9 @@ final class ProjectRepository {
     func setUp(delegate: ProjectRepositoryDelegate) {
         self.delegate = delegate
         projects = CoreDataStack.shared.fetch()
+//        firestore.fetch(completion: { projects in
+//            self.projects = projects
+//        })
     }
     
     func addProject(_ project: Project) {
