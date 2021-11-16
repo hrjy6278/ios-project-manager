@@ -17,11 +17,11 @@ final class ProjectRowViewModel: Identifiable {
         case changeType(type: ProjectStatus)
     }
 
-    private var project: Project
+    private var project: ProjectPlan
     private let repository = ProjectRepository()
     weak var delegate: ProjectRowViewModelDelegate?
 
-    init(project: Project) {
+    init(project: ProjectPlan) {
         self.project = project
     }
 

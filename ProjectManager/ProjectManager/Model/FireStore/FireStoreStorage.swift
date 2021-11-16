@@ -13,9 +13,10 @@ struct FirestoreStorage {
     private let db = Firestore.firestore()
     private let path = "projectManager"
 
-    func upload(project: Project) {
+    func upload(project: ProjectPlan) {
         try? db.collection(path).document("\(project.id)").setData(from: project)
     }
+
     func fetch<T: Decodable>(completion: @escaping ([T]) -> Void) {
         db.collection(path).addSnapshotListener { snapshot, error in
             guard let snapshot = snapshot else { return }

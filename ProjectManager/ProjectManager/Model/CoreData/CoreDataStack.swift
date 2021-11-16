@@ -14,6 +14,7 @@ final class CoreDataStack {
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
+
     private let name = "CoreDataStorage"
     private lazy var persistentContainer: NSPersistentContainer = {
         
@@ -44,5 +45,18 @@ final class CoreDataStack {
     
     func fetch() -> [Project] {
        return try! context.fetch(Project.fetchRequest())
+    }
+    
+    func deleteAll() {
+        let dd = persistentContainer.managedObjectModel.entities
+        dd.forEach { entity in
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: entity.name ?? "")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
+            do {
+                try persistentContainer.viewContext.execute(deleteRequest)
+            } catch {
+                print(":v")
+            }
+        }
     }
 }

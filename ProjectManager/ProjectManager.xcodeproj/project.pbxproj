@@ -19,8 +19,8 @@
 		4D75987427428E290090E6DA /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */; };
 		4D759877274295110090E6DA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D759876274295110090E6DA /* CoreDataStack.swift */; };
 		4D759878274295110090E6DA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D759876274295110090E6DA /* CoreDataStack.swift */; };
-		4DBCB3D327301F98008474D6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* Project.swift */; };
-		4DBCB3D427301F98008474D6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* Project.swift */; };
+		4DBCB3D327301F98008474D6 /* ProjectPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* ProjectPlan.swift */; };
+		4DBCB3D427301F98008474D6 /* ProjectPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCB3D227301F98008474D6 /* ProjectPlan.swift */; };
 		74311C24273017F400951DC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74311C23273017F400951DC3 /* ContentView.swift */; };
 		74311C292730181A00951DC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7431F0525F51E1D0094C4CF /* AppDelegate.swift */; };
 		74311C2A2730181A00951DC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7431F0725F51E1D0094C4CF /* SceneDelegate.swift */; };
@@ -53,7 +53,7 @@
 		4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4D759876274295110090E6DA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4DBCB3D027301935008474D6 /* NonFirebase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NonFirebase-Info.plist"; sourceTree = "<group>"; };
-		4DBCB3D227301F98008474D6 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		4DBCB3D227301F98008474D6 /* ProjectPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPlan.swift; sourceTree = "<group>"; };
 		74311C23273017F400951DC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74311C332730181A00951DC3 /* NonFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NonFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74311C39273104E400951DC3 /* ProjectListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewModel.swift; sourceTree = "<group>"; };
@@ -106,22 +106,22 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		4D759875274294E40090E6DA /* CoreDataStack */ = {
+		4D759875274294E40090E6DA /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				4D75986B27428DA30090E6DA /* CoreDataStorage.xcdatamodeld */,
+				4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */,
+				4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */,
 				4D759876274295110090E6DA /* CoreDataStack.swift */,
 			);
-			path = CoreDataStack;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		4DBCB3D127301F06008474D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4D75986F27428E290090E6DA /* Project+CoreDataClass.swift */,
-				4D75987027428E290090E6DA /* Project+CoreDataProperties.swift */,
-				4DBCB3D227301F98008474D6 /* Project.swift */,
-				4D759875274294E40090E6DA /* CoreDataStack */,
+				4DBCB3D227301F98008474D6 /* ProjectPlan.swift */,
+				4D759875274294E40090E6DA /* CoreData */,
 				89C3AE8027436CF100727A1B /* FireStore */,
 			);
 			path = Model;
@@ -316,7 +316,7 @@
 				4D75987427428E290090E6DA /* Project+CoreDataProperties.swift in Sources */,
 				89FDAD21273022F90017A197 /* ProjectListView.swift in Sources */,
 				74311C2B2730181A00951DC3 /* ContentView.swift in Sources */,
-				4DBCB3D427301F98008474D6 /* Project.swift in Sources */,
+				4DBCB3D427301F98008474D6 /* ProjectPlan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +339,7 @@
 				89FDAD20273022F90017A197 /* ProjectListView.swift in Sources */,
 				89C3AE7C27436B4600727A1B /* FireStoreStorage.swift in Sources */,
 				74311C24273017F400951DC3 /* ContentView.swift in Sources */,
-				4DBCB3D327301F98008474D6 /* Project.swift in Sources */,
+				4DBCB3D327301F98008474D6 /* ProjectPlan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum Action  {
-    case create(project: Project)
+    case create(project: ProjectPlan)
     case delete(indexSet: IndexSet)
-    case update(project: Project)
+    case update(project: ProjectPlan)
 }
 
 final class ProjectListViewModel: ObservableObject{
@@ -53,7 +53,7 @@ extension ProjectListViewModel: ProjectRowViewModelDelegate {
 }
 
 extension ProjectListViewModel: ProjectRepositoryDelegate {
-    func changeRepository(project: [Project]) {
+    func changeRepository(project: [ProjectPlan]) {
         projectList = project.map { project in
            let rowViewModel = ProjectRowViewModel(project: project)
             rowViewModel.delegate = self

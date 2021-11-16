@@ -91,14 +91,14 @@ extension ModalView {
         Button {
             if modalViewType == .add {
                 projectListViewModel.action(
-                    .create(project: Project(title: title, detail: description, date: date, type: .todo)))
+                    .create(project: ProjectPlan(title: title, detail: description, date: date, type: .todo)))
             } else if isEdit && modalViewType == .edit {
                 guard let id = projectID,
                         let viewModel = projectListViewModel.selectedProject(from: id) else {
                             return
                         }
                 projectListViewModel.action(
-                    .update(project: Project(id: id,
+                    .update(project: ProjectPlan(id: id,
                                              title: title,
                                              detail: description,
                                              date: date,
