@@ -13,6 +13,7 @@ protocol ProjectRepositoryDelegate: AnyObject {
 
 final class ProjectRepository {
     weak var delegate: ProjectRepositoryDelegate?
+    private let firestore = FirestoreStorage()
     private var projects: [Project] = [] {
         didSet {
             delegate?.changeRepository(project: projects)
@@ -26,15 +27,18 @@ final class ProjectRepository {
     
     func addProject(_ project: Project) {
         projects.append(project)
+        firestore.upload(project: project)
     }
     
     func removeProject(indexSet: IndexSet) {
         let index = indexSet[indexSet.startIndex]
         CoreDataStack.shared.context.delete(projects[index])
+        firestore.delete(id: projects[index].id)
         projects.remove(atOffsets: indexSet)
     }
     
     func updateProject(_ project: Project) {
         projects.firstIndex { $0.id == project.id }.flatMap { projects[$0] = project }
+        firestore.upload(project: project)
     }
 }

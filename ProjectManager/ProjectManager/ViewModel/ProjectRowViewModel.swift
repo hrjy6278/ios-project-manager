@@ -13,11 +13,13 @@ protocol ProjectRowViewModelDelegate: AnyObject {
 }
 
 final class ProjectRowViewModel: Identifiable {
-    private var project: Project
-    weak var delegate: ProjectRowViewModelDelegate?
     enum Action {
         case changeType(type: ProjectStatus)
     }
+
+    private var project: Project
+    private let repository = ProjectRepository()
+    weak var delegate: ProjectRowViewModelDelegate?
 
     init(project: Project) {
         self.project = project
@@ -61,15 +63,16 @@ final class ProjectRowViewModel: Identifiable {
         }
     }
 
+    var transitionType: [ProjectStatus] {
+        return ProjectStatus.allCases.filter { $0 != project.type }
+    }
+
     func action(_ action: Action) {
         switch action {
         case .changeType(let type):
             project.type = type
+            repository.updateProject(project)
             delegate?.updateViewModel()
         }
-    }
-
-    var transitionType: [ProjectStatus] {
-        return ProjectStatus.allCases.filter { $0 != project.type }
     }
 }
