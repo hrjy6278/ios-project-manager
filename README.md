@@ -7,7 +7,7 @@
 
 1. **[기능구현](#i-기능-구현)**
 2. **[이를 위한 설계](#ii-이를-위한-설계)**
-3. **[Trouble Shooting](#iii-Trouble-Shooting)**
+3. **[Trouble Shooting](#iii-trouble-shooting)**
 4. **[아쉽거나 해결하지 못한 부분](#iv-해결하지-못한-문제)**
 5. **[관련 학습내용](#v-관련학습-내용)**
 
