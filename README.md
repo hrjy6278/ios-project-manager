@@ -16,7 +16,9 @@
 
 ## I. 기능 구현
 
-![Simulator Screen Recording - iPad mini (6th generation) - 2021-11-22 at 21.09.28.gif](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ce6da84c-0bbc-44c2-8fbc-4952821cd102/Simulator_Screen_Recording_-_iPad_mini_%286th_generation%29_-_2021-11-22_at_21.09.28.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211126T084204Z&X-Amz-Expires=86400&X-Amz-Signature=61289d4e3c5a22923f0b6b3ef34820c8522d277b4f74b49f3043225841afa048&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Recording%2520-%2520iPad%2520mini%2520%286th%2520generation%29%2520-%25202021-11-22%2520at%252021.09.28.gif%22&x-id=GetObject)
+![Simulator Screen Recording - iPad mini (6th generation) - 2021-11-22 at 21 09 28](https://user-images.githubusercontent.com/71247008/144963118-367434b7-b6ab-4c98-975b-e6e632025fad.gif)
+
+
 
 - **Swift UI** 를 사용한 UI 구현
 - **MVVM** 아키텍처 사용
@@ -33,12 +35,11 @@
 
 ### UML
 
-![ProjectManager UML.drawio.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6ad43d38-a80f-45cd-97b3-4e21ba066bf1/ProjectManager_UML.drawio.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211126T084226Z&X-Amz-Expires=86400&X-Amz-Signature=77aa843f7edced35bcd23c2aa7e9966bf9458aef8a1018435b30e8bdf1260fc6&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22ProjectManager%2520UML.drawio.png%22&x-id=GetObject)
+![ProjectManager UML drawio](https://user-images.githubusercontent.com/71247008/144963093-f1aa082a-0086-4308-94c0-ee1b2be08540.png)
 
 ### 로컬, 리모트 동기화 시퀀스 다이어그램
 
-![Untitled Diagram.drawio.png](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/13519511-6d7e-4cc9-91c9-2c36bbea7345/Untitled_Diagram.drawio.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211126T084236Z&X-Amz-Expires=86400&X-Amz-Signature=42f681312131186c72e736469e626e39b6b3dd75f17234b24302b95584ddf3ba&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled%2520Diagram.drawio.png%22&x-id=GetObject)
-
+![sequence diagram](https://user-images.githubusercontent.com/71247008/144963241-1fc458e4-5380-4d69-8ebb-620700b8daeb.png)
 <br>
 <br>
 <br>
@@ -696,7 +697,7 @@ final class ProjectListViewModel: ObservableObject{
     
     `Swift UI`의 `List View` 를 사용했을때 `Cell`의 간격을 줄 수가 없었다. 이 부분을 해결하지 못했다.
     
-    ![팀원들과 함께한 프로젝트](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9f2776cf-6c24-4f11-9a45-89b42713167e/Simulator_Screen_Shot_-_iPad_mini_%286th_generation%29_-_2021-11-05_at_20.35.25.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211126T092649Z&X-Amz-Expires=86400&X-Amz-Signature=6f2fbf758bf66fc3d29ac45fc8ae184398cda15d15b8d491b9e32898872361f4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Shot%2520-%2520iPad%2520mini%2520%286th%2520generation%29%2520-%25202021-11-05%2520at%252020.35.25.png%22&x-id=GetObject)
+    ![팀원들과 함께한 프로젝트](https://user-images.githubusercontent.com/71247008/144963352-7d7ff296-cbda-4b7a-9016-7d915e64bb70.png)
     
     팀원들과 함께한 프로젝트
     
